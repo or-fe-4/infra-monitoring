@@ -21,7 +21,7 @@ stress-ngでCPUを意図的に100%にして、Grafanaのダッシュボードが
 
 stress-ng --cpu 2 --timeout 60s
 
-CPU Busyのゲージが跳ね上がり、60秒後に正常値に戻ることを確認。
+CPU Busyのゲージが跳ね上がった。
 
 ## アクセス先
 

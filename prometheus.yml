@@ -1,9 +1,15 @@
+# Prometheus全体の設定
 global:
+  # 15秒ごとにメトリクスを収集する
   scrape_interval: 15s
 
+# 収集先の設定
 scrape_configs:
+  # Prometheus自身のメトリクスを収集する
+  # Prometheusが正常に動いているか監視するのが目的
   - job_name: 'prometheus'
     static_configs:
+      # Prometheus自身のポート9090から収集する
       - targets: ['localhost:9090']
 
   - job_name: 'node-exporter'
